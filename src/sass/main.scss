@@ -33,7 +33,7 @@
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
       Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
-    // background-image: url('../src/images/bg-pattern.png');
+    background-image: url('../images/bg-pattern.png');
     color: #212121;
   }
   h1 {
@@ -177,10 +177,10 @@
     cursor: pointer;
     transition: background-color var(--animation-duration) var(--timing-function);
     outline: none;
-    // background-image: url('../src/images/icon-close.svg');
-    // background-position: center;
-    // background-size: 60%;
-    // background-repeat: no-repeat;
+    background-image: url('../images/icon-close.svg');
+    background-position: center;
+    background-size: 60%;
+    background-repeat: no-repeat;
   }
   
   .lightbox__button:hover,

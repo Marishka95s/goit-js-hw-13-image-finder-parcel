@@ -1,6 +1,6 @@
-{{#each hits}}
+{{#each this}}
 <li class="gallery__item">
-    <img data-url="{{largeImageURL}}" class="gallery__image" src="{{webformatURL}}" alt="Photo about {{tags}}" width="392px" height="240px" />
+    <img id= {{indexItem}} data-url="{{largeImageURL}}" class="gallery__image" src="{{webformatURL}}" alt="Photo about {{tags}}" width="392px" height="240px" />
 
     <div class="stats">
         <p class="stats-item"> <i class="material-icons">thumb_up</i>{{likes}}</p>                

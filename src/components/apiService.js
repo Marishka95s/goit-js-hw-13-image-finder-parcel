@@ -5,6 +5,7 @@ export default class PicturesApiService {
     constructor() {
         this.searchQuery = '';
         this.page = 1;
+        this.indexItem = 0;
     }
     fetchPictures(){
         const queryUrl = `${BASIC_URL}?image_type=photo&orientation=horizontal&q=${this.searchQuery}&page=${this.page}&per_page=12&key=${KEY}`;
@@ -13,6 +14,14 @@ export default class PicturesApiService {
         .then(r => { 
             this.incrementPage();
             return r.json()})
+
+        .then(data => {
+            return data.hits.map(element => {
+                this.indexItem +=1
+                element.indexItem = this.indexItem
+                return element
+            })
+            })
         .catch(error => {
             console.log('This is error:', error)
         });
@@ -23,6 +32,7 @@ export default class PicturesApiService {
     }
     resetPage() {
         this.page = 1;
+        this.indexItem = 0;
       }
     
       get query() {
